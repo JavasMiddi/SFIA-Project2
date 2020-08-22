@@ -1,0 +1,8 @@
+{% block body_content %}
+<center><br><h1>{{ fortune }} </h1>
+<h3>{{ colour }} {{ number }}</h3>
+<div class='form'>
+        <form action="{{ url_for('fortune') }}">
+        <button type="submit">Randomise</button>
+        </form></center>
+{% endblock body_content %}

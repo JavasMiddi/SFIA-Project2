@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<center><div class='form'>
+        <form action="{{ url_for('fortune') }}">
+        <button type="submit">Generate your fortune cookie!</button>
+        </form></center>
+{% endblock %}
