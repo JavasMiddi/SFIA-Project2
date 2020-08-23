@@ -8,7 +8,7 @@ pipeline {
         }
         stage('docker installs') {
             steps {
-                sh './scripts/docker-install.sh'
+                sh './scripts/docker-installs.sh'
             }
         }
         stage('deploy') {
