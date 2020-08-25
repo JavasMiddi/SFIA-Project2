@@ -1,6 +1,0 @@
-{
-  "service1/testing/test_back_end.py": true, 
-  "service2/testing/test_back_end.py": true, 
-  "service3/testing/test_back_end.py": true, 
-  "service4/testing/test_back_end.py": true
-}
