@@ -19,7 +19,7 @@ def fortune_fortune():
         fortune = "You learn from your mistakes... You will learn a lot today."
     elif data['colour'] == "red" and data['number'] == "2":
         fortune = "Help! I am being held prisoner in a fortune cookie factory."
-    elif data['colour'] == "red" and data['number' == "3":
+    elif data['colour'] == "red" and data['number'] == "3":
         fortune = "A foolish man listens to his heart. A wise man listens to cookies."
     elif data['colour'] == "red" and data['number'] == "4":
         fortune = "The fortune you seek is in another cookie."
