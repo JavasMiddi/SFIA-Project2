@@ -12,8 +12,7 @@ def fortune():
     
     colour = requests.get("http://service2:5001/fortune/colour")
     number = requests.get("http://service3:5002/fortune/number")    
-    fortune = requests.post("http://service4:5003/fortune/fortune", data=colour)
-    
+    fortune = requests.post("http://service4:5003/fortune/fortune", json={"colour":colour.text, "number":number.text})    
     fortune1 = Fortune(colour=colour.text, number=number.text, fortune=fortune.text)
     db.session.add(fortune1)
     db.session.commit()
