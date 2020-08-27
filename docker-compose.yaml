@@ -9,6 +9,9 @@ services:
         protocol: tcp
     environment:
       DATABASE_URI: ${DATABASE_URI}
+    deploy:
+      replicas: 2
+
   service2:
     image: 127.0.0.1:4999/service2
     build: ./service2
@@ -16,6 +19,9 @@ services:
       - target: 5001
         published: 5001
         protocol: tcp
+    deploy:
+      replicas: 2
+
   service3:
     image: 127.0.0.1:4999/service3
     build: ./service3
@@ -23,6 +29,9 @@ services:
       - target: 5002
         published: 5002
         protocol: tcp
+    deploy:
+      replicas: 2
+
   service4:
     image: 127.0.0.1:4999/service4
     build: ./service4
@@ -30,6 +39,9 @@ services:
       - target: 5003
         published: 5003
         protocol: tcp
+    deploy:
+      replicas: 2
+
   database:
     image: mysql:5.7
     ports:
