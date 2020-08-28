@@ -1,0 +1,16 @@
+---
+- name: Add Nodes 1
+  docker_swarm:
+    state: join
+    debug: true
+    advertise_addr: worker1
+    join_token: "{{ hostvars['info']['dockertoken'] }}"
+    remote_addrs: [ '35.246.95.91:2377' ]
+
+- name: Add Node 2
+  docker_swarm:
+    state: join
+    debug: true
+    advertise_addr: worker2    
+    join_token: "{{ hostvars['info']['dockertoken'] }}"
+    remote_addrs: [ '35.246.95.91:2377' ]

@@ -1,0 +1,22 @@
+- hosts: docker
+  become: true
+  roles:
+  - docker
+  - docker-compose
+
+- hosts: swarm
+  become: true
+  roles:
+  - swarm-manager
+
+- hosts: swarm-join
+  become: true
+  roles:
+  - swarm-worker
+    
+- hosts: nginx
+  become: true
+  roles:
+  - nginx_install
+  - nginx_reload
+  - nginx_conf
