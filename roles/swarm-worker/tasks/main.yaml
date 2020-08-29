@@ -1,10 +1,14 @@
 ---
-- name: Add Nodes 1
+- name: Leave Current Swarm
+  docker_swarm:
+    state: absent
+    force: true
+
+- name: Add Node 1
   docker_swarm:
     state: join
-    debug: true
     advertise_addr: worker1
-    join_token: "{{ hostvars['info']['dockertoken'] }}"
+    join_token: "{{ hostvars['join-token']['value'] }}"
     remote_addrs: [ '35.246.95.91:2377' ]
 
 - name: Add Node 2
@@ -12,5 +16,5 @@
     state: join
     debug: true
     advertise_addr: worker2    
-    join_token: "{{ hostvars['info']['dockertoken'] }}"
+    join_token: "{{ hostvars['join-token']['value'] }}"
     remote_addrs: [ '35.246.95.91:2377' ]

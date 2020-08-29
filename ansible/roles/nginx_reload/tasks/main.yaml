@@ -1,5 +1,0 @@
-- name: Reload NGINX
-  service:
-    name: nginx
-    state: reloaded
-  when: "{{ hostvars['new_config']['value'] }}"

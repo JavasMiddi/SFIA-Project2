@@ -1,0 +1,24 @@
+---
+- name: Leave Swarm
+  docker_swarm:
+    state: absent
+    force: true
+
+- name: Initialise Swarm
+  docker_swarm:
+    state: present
+  
+- name: Store Swarm Info
+  docker_swarm:
+          state: inspect
+  register: swarm_info
+
+- name: Inspect Swarm Nodes
+  docker_swarm_info:
+    nodes: yes
+
+- name: Retrieve Join Token
+  add_host:
+    name: "join-token"
+    value: "{{ swarm_info.swarm_facts.JoinTokens.Worker }}"
+  
