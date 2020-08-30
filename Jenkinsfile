@@ -1,20 +1,22 @@
 pipeline {
     agent any
     stages {
-        stage('get repo') {
+        stage("Build") {
             steps {
-                sh './scripts/get-repo.sh'
+                sh "bash ./scripts/build.sh"
             }
         }
-        stage('docker installs') {
+
+        stage("Test") {
             steps {
-                sh './scripts/docker-installs.sh'
+                sh "bash ./scripts/test.sh"
             }
         }
-        stage('deploy') {
+
+        stage("Deploy") {
             steps {
-                sh './scripts/deploy.sh'
+                sh "bash ./scripts/deploy.sh"
             }
         }
     }
-}    
+}
