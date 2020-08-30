@@ -1,6 +1,10 @@
 #! /bin/bash
 pwd
 
+docker exec -it sfia2-project/service1_1 bash
+python3 create.py
+exit
+
 export DATABASE_URI=mysql+pymysql://root:root@localhost:3306/fortune
 export TEST_DB_URI=mysql+pymysql://root:root@localhost:3306/test
 
