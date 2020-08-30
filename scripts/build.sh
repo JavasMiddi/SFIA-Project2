@@ -7,9 +7,9 @@ ansible-playbook -i ./inventory.cfg ./playbook.yaml
 
 sudo chmod 666 /var/run/docker.sock
 docker-compose down --rmi all
-docker system prune -f
 docker-compose build
 docker images
+docker system prune -f
 export DOCKER_USERNAME=${DOCKER_USERNAME}
 export DOCKER_PASSWORD=${DOCKER_PASSWORD}
 sudo docker login
