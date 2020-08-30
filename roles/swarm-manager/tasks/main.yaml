@@ -3,6 +3,10 @@
   docker_swarm:
     state: absent
     force: true
+
+- name: Nodes Leaving the Swarm
+  shell: docker swarm leave -f
+  ignore_errors: true
     
 - name: Initialise Swarm
   docker_swarm:

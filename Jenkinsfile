@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage("Deploy") {
+         stage("Deploy") {
             steps {
                 sh "bash ./scripts/deploy.sh"
             }
