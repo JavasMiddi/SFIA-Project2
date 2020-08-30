@@ -10,7 +10,7 @@ services:
     environment:
       DATABASE_URI: ${DATABASE_URI}
     deploy:
-      replicas: 2
+      replicas: 3
 
   service2:
     image: 127.0.0.1:4999/service2
@@ -20,7 +20,7 @@ services:
         published: 5001
         protocol: tcp
     deploy:
-      replicas: 2
+      replicas: 3
 
   service3:
     image: 127.0.0.1:4999/service3
@@ -30,7 +30,7 @@ services:
         published: 5002
         protocol: tcp
     deploy:
-      replicas: 2
+      replicas: 3
 
   service4:
     image: 127.0.0.1:4999/service4
@@ -40,8 +40,23 @@ services:
         published: 5003
         protocol: tcp
     deploy:
-      replicas: 2
+      replicas: 3
 
+  nginx:
+    container_name: nginx
+    image: nginx
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
+    deploy:
+      mode: replicated
+      replicas: 3
+      
   database:
     image: mysql:5.7
     ports:
