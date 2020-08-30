@@ -1,19 +1,17 @@
 version: '3.7'
 services:
   service1:
-    image: 127.0.0.1:4999/service1
+    image: javasmiddi/service1
     build: ./service1
     ports:
       - target: 5000
         published: 5000
         protocol: tcp
-    environment:
-      DATABASE_URI: ${DATABASE_URI}
     deploy:
       replicas: 3
 
   service2:
-    image: 127.0.0.1:4999/service2
+    image: javasmiddi/service2
     build: ./service2
     ports:
       - target: 5001
@@ -23,7 +21,7 @@ services:
       replicas: 3
 
   service3:
-    image: 127.0.0.1:4999/service3
+    image: javasmiddi/service3
     build: ./service3
     ports:
       - target: 5002
@@ -33,7 +31,7 @@ services:
       replicas: 3
 
   service4:
-    image: 127.0.0.1:4999/service4
+    image: javasmiddi/service4
     build: ./service4
     ports:
       - target: 5003
@@ -56,19 +54,3 @@ services:
     deploy:
       mode: replicated
       replicas: 3
-      
-#  database:
-#    image: mysql:5.7
-#    ports:
-#      - target: 3306
-#        published: 3306
-#    environment:
-#      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-#      MYSQL_DATABASE: fortune
-#   volumes:
-#      - type: volume
-#        source: database-volume
-#        target: /var/lib/mysql
-
-#volumes:
-#  database-volume:
