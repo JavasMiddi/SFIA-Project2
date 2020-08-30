@@ -23,7 +23,6 @@ sudo docker system prune -f
 sudo docker images
 sudo docker login
 sudo docker-compose push
-=======
 
 sudo docker images
 sudo docker login
