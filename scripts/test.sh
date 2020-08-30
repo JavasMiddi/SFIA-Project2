@@ -2,7 +2,10 @@
 pwd
 ls
 
-cd service2
+export TEST_SECRET_KEY=${TEST_SECRET_KEY}
+export TEST_DB_URI=${TEST_DB_URI} 
+
+cd service1
 pytest --cov application --cov-report term-missing
 cd ..
 
