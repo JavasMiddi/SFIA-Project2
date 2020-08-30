@@ -8,8 +8,8 @@ ansible-playbook -i ./inventory.cfg ./playbook.yaml
 sudo chmod 666 /var/run/docker.sock
 docker-compose down --rmi all
 docker-compose build
-sudo docker images
+docker images
 export DOCKER_USERNAME=${DOCKER_USERNAME}
 export DOCKER_PASSWORD=${DOCKER_PASSWORD}
-sudo docker login
-sudo docker-compose push
+docker login
+docker-compose push
