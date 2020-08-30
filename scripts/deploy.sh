@@ -2,7 +2,7 @@
 pwd
 
 ssh master << EOF
-git clone https://github.com/omris-elda/SFIA-Project-2.git
+git clone https://github.com/JavasMiddi/SFIA-Project-2.git
 export SECRET_KEY=${SECRET_KEY} 
 export DATABASE_URI=${DATABASE_URI} 
 
