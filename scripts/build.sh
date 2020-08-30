@@ -2,8 +2,6 @@
 pwd
 whoami
 ls
-<<<<<<< HEAD
-=======
 sudo mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 . ~/.bashrc
