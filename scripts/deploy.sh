@@ -2,7 +2,7 @@
 pwd
 
 ssh master << EOF
-git clone https://github.com/JavasMiddi/SFIA-Project-2.git
+scp /home/javasmiddleton12/SFIA-Project2/docker-compose.yaml /home/jenkins/
 export SECRET_KEY=${SECRET_KEY} 
 export DATABASE_URI=${DATABASE_URI} 
 
