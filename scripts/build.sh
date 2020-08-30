@@ -7,6 +7,7 @@ ansible-playbook -i ./inventory.cfg ./playbook.yaml
 
 sudo chmod 666 /var/run/docker.sock
 docker-compose down --rmi all
+docker service create --name registry --publish 4999:5000 registry
 docker-compose build
 sudo docker images
 sudo docker login
