@@ -2,7 +2,7 @@
 pwd
 
 docker-compose logs
-
+docker ps
 docker exec -it sfia2-project/service1_1 bash
 python3 create.py
 exit
