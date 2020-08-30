@@ -2,7 +2,7 @@
 pwd
 ls
 
-cd service1
+cd service2
 pytest --cov application --cov-report term-missing
 cd ..
 
