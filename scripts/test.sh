@@ -1,23 +1,22 @@
 #! /bin/bash
 pwd
-ls
 
 cd service1
-pip3 install -r requirements.txt
-python3 -m pytest --cov app --cov-report term-missing
+sudo pip3 install -r requirements.txt
+/home/jenkins/.local/bin/pytest
 cd ..
 
 cd service2
-pip3 install -r requirements.txt
-python3 -m pytest --cov app --cov-report term-missing
+sudo pip3 install -r requirements.txt
+/home/jenkins/.local/bin/pytest
 cd ..
 
 cd service3
-pip3 install -r requirements.txt
-python3 -m pytest --cov app --cov-report term-missing
+sudo pip3 install -r requirements.txt
+/home/jenkins/.local/bin/pytest
 cd ..
 
 cd service4
-pip3 install -r requirements.txt
-python3 -m pytest --cov app --cov-report term-missing
+sudo pip3 install -r requirements.txt
+/home/jenkins/.local/bin/pytest
 cd ..
