@@ -57,18 +57,18 @@ services:
       mode: replicated
       replicas: 3
       
-  database:
-    image: mysql:5.7
-    ports:
-      - target: 3306
-        published: 3306
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: fortune
-    volumes:
-      - type: volume
-        source: database-volume
-        target: /var/lib/mysql
+#  database:
+#    image: mysql:5.7
+#    ports:
+#      - target: 3306
+#        published: 3306
+#    environment:
+#      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+#      MYSQL_DATABASE: fortune
+#   volumes:
+#      - type: volume
+#        source: database-volume
+#        target: /var/lib/mysql
 
-volumes:
-  database-volume:
+#volumes:
+#  database-volume:
