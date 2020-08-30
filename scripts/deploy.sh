@@ -1,6 +1,7 @@
 #! /bin/bash
 pwd
 ls
+sudo docker rmi -f $(docker images -a -q)
 sudo docker stack deploy --compose-file docker-compose.yaml SFIA2
 sudo docker stack services SFIA2
 
