@@ -3,7 +3,7 @@
   roles:
   - docker
 
-- hosts: master
+- hosts: manager
   become: true
   roles:
   - swarm-manager

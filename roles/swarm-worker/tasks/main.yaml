@@ -3,20 +3,16 @@
     state: absent
     force: true
 
-- name: Nodes Leaving the Swarm
-  shell: docker swarm leave -f
-  ignore_errors: true
-
 - name: Add Node 1
   docker_swarm:
     state: join
     advertise_addr: 35.246.95.91
     join_token: "{{ hostvars['join-token']['value'] }}"
-    remote_addrs: [ '35.197.244.136:2377' ]
+    remote_addrs: [ '10.154.0.38:2377' ]
 
 - name: Add Node 2
   docker_swarm:
     state: join
     advertise_addr: 34.89.36.81
     join_token: "{{ hostvars['join-token']['value'] }}"
-    remote_addrs: [ '35.197.244.136:2377' ]
+    remote_addrs: [ '10.154.0.38:2377' ]

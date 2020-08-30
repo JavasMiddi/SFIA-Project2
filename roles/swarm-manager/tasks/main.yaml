@@ -3,14 +3,14 @@
   docker_swarm:
     state: absent
     force: true
-
+    
 - name: Initialise Swarm
   docker_swarm:
     state: present
   
 - name: Store Swarm Info
   docker_swarm:
-          state: inspect
+    state: inspect
   register: swarm_info
 
 - name: Inspect Swarm Nodes
