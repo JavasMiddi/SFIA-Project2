@@ -10,5 +10,5 @@ sudo apt install python3-pip
 
 sudo pip3 install ansible
 
-ansible-playbook -i ./ansible/inventory.cfg ./ansible/playbook.yaml
+ansible-playbook -i ./inventory.cfg ./playbook.yaml
 
