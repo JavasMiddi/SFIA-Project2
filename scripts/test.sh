@@ -1,7 +1,5 @@
 #! /bin/bash
 pwd
-ls
-
 export TEST_SECRET_KEY=${TEST_SECRET_KEY}
 export TEST_DB_URI=${TEST_DB_URI} 
 

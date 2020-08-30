@@ -1,6 +1,5 @@
 #! /bin/bash
 pwd
-ls
 
 ssh manager << EOF
 scp /home/javasmiddleton12/SFIA-Project2/docker-compose.yaml /home/jenkins/

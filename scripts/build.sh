@@ -11,5 +11,5 @@ docker-compose build
 docker images
 export DOCKER_USERNAME=${DOCKER_USERNAME}
 export DOCKER_PASSWORD=${DOCKER_PASSWORD}
-docker login
-docker-compose push
+sudo docker login
+sudo docker-compose push
