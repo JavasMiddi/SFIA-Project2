@@ -1,14 +1,19 @@
-#!/bin/bash
-pip3 install -r ./requirements.txt
+#! /bin/bash
+pwd
+ls
 
 cd service1
-/home/jenkins/.local/bin/pytest
+pytest --cov app --cov-report term-missing
+cd ..
 
-cd ../service2
-/home/jenkins/.local/bin/pytest
+cd service2
+pytest --cov app --cov-report term-missing
+cd ..
 
-cd ../service3
-/home/jenkins/.local/bin/pytest
+cd service3
+pytest --cov app --cov-report term-missing
+cd ..
 
-cd ../service4
-/home/jenkins/.local/bin/pytest
+cd service4
+pytest --cov app --cov-report term-missing
+cd ..
