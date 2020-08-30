@@ -13,7 +13,6 @@ sudo pip3 install ansible
 ansible-playbook -i ./inventory.cfg ./playbook.yaml
 
 sudo apt update
-curl https://get.docker.com | sudo bash
 sudo usermod -aG docker $(whoami)
 sudo apt update
 sudo apt install -y curl jq python3 python3-pip
