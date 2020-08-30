@@ -20,5 +20,6 @@ version=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | 
 sudo curl -L "https://github.com/docker/compose/releases/download/${version}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+docker service create --name registry —publish 4999:5000 registry
+docker-compose push
 sudo docker-compose build
-sudo docker-compose push
