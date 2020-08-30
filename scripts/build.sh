@@ -9,5 +9,7 @@ sudo chmod 666 /var/run/docker.sock
 docker-compose down --rmi all
 docker-compose build
 sudo docker images
+echo ${DOCKER_USERNAME}
+echo ${DOCKER_PASSWORD}
 sudo docker login
 sudo docker-compose push
