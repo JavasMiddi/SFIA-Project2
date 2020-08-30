@@ -7,7 +7,7 @@ pytest --cov application --cov-report term-missing
 cd ..
 
 cd service2
-pytest --cov applicaton --cov-report term-missing
+pytest --cov application --cov-report term-missing
 cd ..
 
 cd service3
