@@ -12,6 +12,7 @@ mpose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chown jenkins /var/run/docker.sock
+export MYSQL_ROOT_PASSWORD=root
 docker service create --name registry —publish 4999:5000 registry
 docker-compose push
 sudo docker-compose up -d 
