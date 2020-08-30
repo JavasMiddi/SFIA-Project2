@@ -16,5 +16,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo chown jenkins /var/run/docker.sock
 docker service create --name registry —publish 4999:5000 registry
 docker-compose push
-sudo docker-compose build -d
-~                           
+sudo docker-compose build -d                           
