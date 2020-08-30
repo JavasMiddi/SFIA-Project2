@@ -1,6 +1,8 @@
 #! /bin/bash
 pwd
 
+docker-compose logs
+
 docker exec -it sfia2-project/service1_1 bash
 python3 create.py
 exit
