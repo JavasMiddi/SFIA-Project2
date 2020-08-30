@@ -10,6 +10,5 @@ sudo apt install python3-pip
 
 pip3 install ansible
 
-cd ~/SFIA-Project2
-ansible-playbook -i inventory/cfg playbook.yaml
+ansible-playbook -i ./ansible/inventory.cfg ./ansible/playbook.yaml
 
