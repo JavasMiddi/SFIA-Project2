@@ -7,8 +7,6 @@ echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 . ~/.bashrc
 
 sudo apt install python3-pip
-
 sudo pip3 install ansible
-
 ansible-playbook -i ./inventory.cfg ./playbook.yaml
 
