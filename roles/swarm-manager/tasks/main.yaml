@@ -4,7 +4,7 @@
     state: absent
     force: true
 
-- name: Nodes Leaving the Swarm
+- name: Leave Swarm via Force
   shell: docker swarm leave -f
   ignore_errors: true
     
