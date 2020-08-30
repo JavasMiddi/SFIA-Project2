@@ -12,4 +12,7 @@ docker images
 export DOCKER_USERNAME=${DOCKER_USERNAME}
 export DOCKER_PASSWORD=${DOCKER_PASSWORD}
 sudo docker login
-sudo docker-compose push
+docker push javasmiddi/service1:latest
+docker push javasmiddi/service2:latest
+docker push javasmiddi/service3:latest
+docker push javasmiddi/service4:latest
