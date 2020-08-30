@@ -6,12 +6,6 @@ pipeline {
                 sh "bash ./scripts/build.sh"
             }
         }
-       
-        stage("Compose") {
-            steps {
-                sh "bash ./scripts/compose.sh"
-            }
-        }
 
         stage("Test") {
             steps {
