@@ -42,9 +42,18 @@ ________________________________________________________________________________
 As usual, testing is one of the biggest factors in the development of a program. Extensive testing needs to be carried out to make sure that there is zero possibility of the program breaking, no matter the circumstances. Due to the nature of the specification, the API could be extensively tested, eventually reaching a coverage of 100% on all four services.
 
 #### However, this was not achievable in a matter of minutes.
-## EXPLAIN PROGRESSION OF TESTING, ANY ISSUES ENCOUNTERED
-## WHAT COULD / COULDN'T BE TESTED --> WHYYY
-## TEST REPORT - WRITE UP QUICK SUMMARY
+
+### Testing during this project provided me with a number issues, one of which forced me to change the service 1 completely.
+
+* Services 2, and 3 were fairly simple to test: getting a correct response code (200), so that the routes were correct and were made. Ensuring the tests were written correctly, both of these generated 100% coverage, as displayed in the presentation. 
+
+* Service 4 were simple tests, but getting the correct data proved a challenge. At the bottom of the lists is an else statement, the chances of this else statement being used were near impossible, assuming the correct data was retrieved. For ages I was receiving the fortune depicted by the else statement, indicating the the data recieved from services 2 and 3 weren't as they should be. 
+This was later resolved through the use of a JSON dictionary configuration - the service was receiving only one input, and setting both the variables to be the same, for example, service 4 was receiving "blue", "blue" or "1","1" - as neither of these combinations were in the comparable fortune list, the else statement was triggered. After the correct data was received, in it's text form, all fortunes simply had to be tested, as well as the else statement, giving another 100% test coverage report - as indicated in the screenshots in the presentation.
+
+* Service 1 was a whole different task. It produced errors and obstacles all the way up to Jenkins Automation, it was at that point where I decided to create an SQL Instance, instead of configuring it internally like I had previously done. Having to continually change the environment variables was tricky enough manually, but when it came to automating the application, this was beyond my knowledge and skill. Therefore, I created an external instance and updated the Database URI and the Test Database URI; the tests finally passed and it made automation a lot easier. For ages I had struggled with initalising the database, sending the correct data to it, creating the schema and tables, but creating an external instance solved all of these issues for me. Fortunately, this change didn't have as big a knock-on effect as I had anticipated, minimal code had to be changed. Once the variables had been exported properly then the tests could be run. These tests included viewing the pages and configuring the correct GET and POST requests, and testing the data of one fortune. If one of these fortunes passed the test, then they all would, as the funnctions were programmed and configured correctly. This service also obtained 100% test coverage - as displayed in the presentation.
+
+* Test Report - Summary
+  - In conclusion, the services were able to obtain 100% test coverage due to the nature of the project. Whilst the description of the application is simple, the focus was more on functionality. Areas such as deployment, automation and configuration were prioritised over how the application looked and what you could do with it. Therefore, testing could be heavily implemented throughout the entire project, every aspect of the app could be tested, resulting in the coverage report that is displayed at the end of Pytest. There were minimal sections that couldn't be tested, even using the Pytest's function to provide a coverage report and indicate lines in the services that weren't tested, all reports gave the same answer: 0. There were no lines that were missing from the coverage report, thus, all lines were accounted for and had been tested and had indeed passed.
 
 _________________________________________________________________________________________________________________________________________________________________
 
