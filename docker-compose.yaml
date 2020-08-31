@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nginx:
-    image: nginx:latest
+    image: nginx
     ports:
     - target: 80
       published: 80
@@ -10,6 +10,8 @@ services:
     - type: bind
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
+    deploy:
+      replicas: 3
 
   service1:
     image: javasmiddi/service1
