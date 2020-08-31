@@ -9,6 +9,9 @@ services:
         protocol: tcp
     deploy:
       replicas: 3
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+      SECRET_KEY: ${MY_SECRET_KEY}
 
   service2:
     image: javasmiddi/service2

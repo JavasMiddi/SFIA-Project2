@@ -8,5 +8,5 @@ export DATABASE_URI=${DATABASE_URI}
 
 docker stack deploy --compose-file docker-compose.yaml SFIA2
 
-sudo docker stack services SFIA22
+sudo docker stack services SFIA2
 EOF
