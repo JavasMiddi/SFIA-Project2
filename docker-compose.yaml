@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-    nginx:
+  nginx:
     image: nginx:latest
     ports:
     - target: 80
