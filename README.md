@@ -71,9 +71,9 @@ ________________________________________________________________________________
 * Ansible
   - Ansible is a configuration management and deployment tool, written in YAML - the same language as the Docker Compose file. It is a powerful asset in the sense that it can spin up a number of nodes to deploy an application, through the use of an inventory and a playbook. 'Plays' can be specificed in the playbook, each play has various properties including the tasks to run and the hosts to run those tasks on. It was used to create the environment in which the application was to be run, pre-installing the languages and tools needed to deploy the project. The playbook was also used to intialise the Swarm, adding the Worker Nodes to it and installing the neccessary packages to make sure they had everything they needed to deploy the app. 
   
-One advantage of this is that if the node is already in the 'desired state', then the playbook simply skips over them, as no changes are needed to be made.
+  - One advantage of this is that if the node is already in the 'desired state', then the playbook simply skips over them, as no changes are needed to be made.
   
-Roles were also utilised in the playbook, similar to functions in Python, these can be reused whenevever they are called in the playbook, which is useful as it reduces redundancy - the roles simply had to be assigned to the corresponding nodes. 
+  - Roles were also utilised in the playbook, similar to functions in Python, these can be reused whenevever they are called in the playbook, which is useful as it reduces redundancy - the roles simply had to be assigned to the corresponding nodes. 
 
 * NGINX
   - NGINX was used as a reverse proxy to automatically redirect and navigate the user to the application, removing the need to type in the whole IP Address, as well as the port that the app is using. As well as accessibility, this is also a form of security as the full address is unknown to the user, making it more difficult for potential hackers to directly acess the application. 
