@@ -1,4 +1,4 @@
-# Project SFIA 2 - Fortune API - Test
+# Project SFIA 2 - Fortune API
 
 ## The Brief
 *-Taken directly from the Practical Project specification on Community-*
